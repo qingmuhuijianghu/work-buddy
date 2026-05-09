@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>母亲节｜带妈妈来小南国，吃顿有仪式感的饭</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #fafafa;
+            line-height: 1.8;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            background: #fff;
+            min-height: 100vh;
+        }
+        
+        /* 头图区域 */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, #ffeef8 0%, #fff0f5 100%);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: #ff6b9d;
+            color: #fff;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+        
+        .hero h1 {
+            font-size: 28px;
+            color: #d63384;
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        
+        .hero-subtitle {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        
+        .hero-img {
+            width: 100%;
+            max-width: 560px;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(214, 51, 132, 0.15);
+        }
+        
+        /* 正文区域 */
+        .content {
+            padding: 30px 24px;
+        }
+        
+        /* 金句卡片 */
+        .quote-box {
+            background: linear-gradient(135deg, #fff5f8 0%, #ffeef5 100%);
+            border-left: 4px solid #ff6b9d;
+            padding: 20px;
+            margin: 24px 0;
+            border-radius: 0 12px 12px 0;
+        }
+        
+        .quote-box p {
+            font-size: 16px;
+            color: #555;
+            font-style: italic;
+        }
+        
+        /* 小标题 */
+        .section-title {
+            display: flex;
+            align-items: center;
+            margin: 32px 0 20px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+        }
+        
+        .section-title::before {
+            content: "";
+            width: 4px;
+            height: 20px;
+            background: linear-gradient(180deg, #ff6b9d, #ff8fb3);
+            margin-right: 10px;
+            border-radius: 2px;
+        }
+        
+        /* 段落 */
+        .content p {
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+        
+        /* 高亮文字 */
+        .highlight {
+            background: linear-gradient(180deg, transparent 60%, #ffd6e7 60%);
+            padding: 0 4px;
+            font-weight: 600;
+        }
+        
+        /* 对话气泡 */
+        .chat-bubble {
+            background: #f8f9fa;
+            padding: 16px 20px;
+            border-radius: 18px;
+            margin: 16px 0;
+            position: relative;
+            font-size: 15px;
+            color: #555;
+        }
+        
+        .chat-bubble::before {
+            content: "💬";
+            position: absolute;
+            left: -10px;
+            top: -10px;
+            font-size: 20px;
+        }
+        
+        /* 痛点列表 */
+        .pain-points {
+            background: #fff9fb;
+            border: 1px dashed #ffcce0;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .pain-points li {
+            list-style: none;
+            padding: 8px 0;
+            font-size: 15px;
+            color: #666;
+            position: relative;
+            padding-left: 28px;
+        }
+        
+        .pain-points li::before {
+            content: "❌";
+            position: absolute;
+            left: 0;
+        }
+        
+        /* 解决方案 */
+        .solution-box {
+            background: linear-gradient(135deg, #d63384 0%, #ff6b9d 100%);
+            color: #fff;
+            padding: 24px;
+            border-radius: 16px;
+            margin: 24px 0;
+        }
+        
+        .solution-box h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+        
+        .solution-box p {
+            color: rgba(255,255,255,0.95);
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+        
+        /* 菜品展示 */
+        .dish-showcase {
+            margin: 24px 0;
+        }
+        
+        .dish-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 16px;
+        }
+        
+        .dish-item {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        
+        .dish-item img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            background: #f5f5f5;
+        }
+        
+        .dish-item p {
+            padding: 10px;
+            font-size: 13px;
+            text-align: center;
+            margin: 0;
+            color: #666;
+        }
+        
+        /* 套餐卡片 */
+        .package-card {
+            background: linear-gradient(135deg, #fff5f8 0%, #ffeef5 100%);
+            border: 2px solid #ffcce0;
+            border-radius: 16px;
+            padding: 24px;
+            margin: 24px 0;
+            text-align: center;
+        }
+        
+        .package-tag {
+            display: inline-block;
+            background: #ff6b9d;
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .package-price {
+            font-size: 32px;
+            color: #d63384;
+            font-weight: 700;
+            margin: 8px 0;
+        }
+        
+        .package-price span {
+            font-size: 14px;
+            color: #888;
+            text-decoration: line-through;
+            margin-left: 8px;
+        }
+        
+        .package-features {
+            text-align: left;
+            margin: 16px 0;
+        }
+        
+        .package-features li {
+            list-style: none;
+            padding: 6px 0;
+            font-size: 14px;
+            color: #555;
+            padding-left: 24px;
+            position: relative;
+        }
+        
+        .package-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #ff6b9d;
+            font-weight: bold;
+        }
+        
+        /* CTA按钮 */
+        .cta-button {
+            display: block;
+            background: linear-gradient(135deg, #d63384 0%, #ff6b9d 100%);
+            color: #fff;
+            text-align: center;
+            padding: 16px 32px;
+            border-radius: 30px;
+            font-size: 17px;
+            font-weight: 600;
+            text-decoration: none;
+            margin: 24px auto;
+            box-shadow: 0 6px 20px rgba(214, 51, 132, 0.3);
+            transition: transform 0.2s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        
+        /* 温馨提示 */
+        .tips-box {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin: 20px 0;
+            font-size: 13px;
+            color: #666;
+        }
+        
+        .tips-box strong {
+            color: #d63384;
+        }
+        
+        /* 结尾 */
+        .ending {
+            text-align: center;
+            padding: 40px 24px;
+            background: linear-gradient(135deg, #fff5f8 0%, #ffeef5 100%);
+        }
+        
+        .ending-emoji {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+        
+        .ending p {
+            color: #666;
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+        
+        .ending .brand {
+            color: #d63384;
+            font-weight: 700;
+            font-size: 18px;
+            margin-top: 16px;
+        }
+        
+        /* 分隔线 */
+        .divider {
+            text-align: center;
+            margin: 32px 0;
+            color: #ddd;
+            font-size: 20px;
+            letter-spacing: 8px;
+        }
+        
+        /* 强调框 */
+        .emphasis-box {
+            background: #d63384;
+            color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 24px 0;
+        }
+        
+        .emphasis-box p {
+            color: #fff;
+            font-size: 16px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头图 -->
+        <div class="hero">
+            <div class="hero-badge">💐 母亲节特别企划</div>
+            <h1>今年母亲节<br>带妈妈吃顿有仪式感的饭</h1>
+            <p class="hero-subtitle">上海小南国 · 珠海富华里店</p>
+            <div style="width:100%;max-width:560px;height:200px;background:linear-gradient(135deg, #ffcce0 0%, #ffeef5 50%, #ffd6e7 100%);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto;box-shadow:0 10px 40px rgba(214,51,132,0.15);">
+                <div style="text-align:center;color:#d63384;">
+                    <div style="font-size:64px;margin-bottom:10px;">👩‍👧</div>
+                    <div style="font-size:18px;font-weight:600;">全世界最好的妈妈</div>
+                    <div style="font-size:13px;color:#888;margin-top:5px;">我的女神妈妈 永远美丽</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 正文 -->
+        <div class="content">
+            
+            <!-- 开场钩子 -->
+            <div class="quote-box">
+                <p>"妈，母亲节想吃什么？"<br>"随便，都行，你们定。"</p>
+            </div>
+            
+            <p>这句话，是不是很耳熟？</p>
+            
+            <p>从小到大，妈妈总是把选择权交给我们。她想吃的、想要的，永远排在最后。这个母亲节，别再让"随便"成为答案。</p>
+            
+            <div class="divider">• • •</div>
+            
+            <!-- 痛点共鸣 -->
+            <div class="section-title">为什么请妈妈吃饭这么难？</div>
+            
+            <p>说实话，带妈妈出去吃饭，你是不是也踩过这些坑：</p>
+            
+            <ul class="pain-points">
+                <li>网上团了个套餐，到店才发现节假日不能用</li>
+                <li>说好的人均100，结账时各种附加费，直接翻倍</li>
+                <li>环境吵闹，妈妈全程皱着眉，吃完赶紧走</li>
+                <li>菜品口味太重，妈妈吃了胃不舒服</li>
+                <li>想拍照发朋友圈，发现餐厅灯光死亡，怎么拍都丑</li>
+            </ul>
+            
+            <p>本来是想尽孝心，结果变成"花钱买罪受"。</p>
+            
+            <div class="chat-bubble">
+                妈妈嘴上不说，但心里想的可能是："下次还是在家吃吧。"
+            </div>
+            
+            <div class="divider">• • •</div>
+            
+            <!-- 解决方案 -->
+            <div class="section-title">今年，我们换个方式</div>
+            
+            <p>小南国懂你的纠结。</p>
+            
+            <p>作为一家开了30多年的上海本帮菜老字号，我们见过太多儿女带着父母来吃饭的场景。我们知道，<span class="highlight">妈妈要的不是多贵，而是被重视的感觉。</span></p>
+            
+            <div class="solution-box">
+                <h3>🌸 母亲节专属餐桌布置</h3>
+                <p>粉色主题花艺 + 心形立牌 + 珍珠装饰</p>
+                <p>让妈妈一进门就被惊艳到</p>
+            </div>
+            
+            <p>想象一下这个画面：</p>
+            
+            <p>妈妈推开包厢门，映入眼帘的是精心布置的粉色餐桌——<span class="highlight">鲜花、气球、烛光、珍珠串成的装饰</span>，桌上立着心形牌子，写着"全世界最好的妈妈"。</p>
+            
+            <p>她的第一反应一定是："哎呀，搞这么隆重干嘛！"</p>
+            
+            <p>但你仔细看，她的眼角在笑。</p>
+            
+            <div class="divider">• • •</div>
+            
+            <!-- 菜品介绍 -->
+            <div class="section-title">妈妈爱吃的，都在这里</div>
+            
+            <p>小南国的菜，讲究一个"家常而不寻常"。</p>
+            
+            <p>不是那种妈妈看不懂的分子料理，而是<span class="highlight">她熟悉的味道，但做得更好。</span></p>
+            
+            <div class="dish-showcase">
+                <div class="dish-grid">
+                    <div class="dish-item">
+                        <div style="width:100%;height:120px;background:linear-gradient(135deg, #8b4513 0%, #a0522d 100%);display:flex;align-items:center;justify-content:center;">
+                            <span style="font-size:48px;">🧆</span>
+                        </div>
+                        <p>红烧狮子头<br><small>肥瘦相间，入口即化</small></p>
+                    </div>
+                    <div class="dish-item">
+                        <div style="width:100%;height:120px;background:linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);display:flex;align-items:center;justify-content:center;">
+                            <span style="font-size:48px;">🦀</span>
+                        </div>
+                        <p>葱姜炒蟹<br><small>蟹肉鲜甜，香气扑鼻</small></p>
+                    </div>
+                    <div class="dish-item">
+                        <div style="width:100%;height:120px;background:linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);display:flex;align-items:center;justify-content:center;">
+                            <span style="font-size:48px;">🐟</span>
+                        </div>
+                        <p>松鼠桂鱼<br><small>外酥里嫩，酸甜可口</small></p>
+                    </div>
+                    <div class="dish-item">
+                        <div style="width:100%;height:120px;background:linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);display:flex;align-items:center;justify-content:center;">
+                            <span style="font-size:48px;">🥬</span>
+                        </div>
+                        <p>时令蔬菜<br><small>清口解腻，健康搭配</small></p>
+                    </div>
+                </div>
+            </div>
+            
+            <p>每一道菜，都是老师傅的手艺。不咸不油，刚好适合长辈的口味。</p>
+            
+            <div class="divider">• • •</div>
+            
+            <!-- 套餐介绍 -->
+            <div class="section-title">母亲节限定套餐</div>
+            
+            <div class="package-card">
+                <div class="package-tag">🎀 限时特惠</div>
+                <h3 style="font-size:20px;color:#333;margin-bottom:8px;">母亲节感恩套餐</h3>
+                <div class="package-price">
+                    ¥520<span>原价 ¥688</span>
+                </div>
+                <p style="color:#888;font-size:13px;margin-bottom:16px;">适合3-4人享用</p>
+                
+                <ul class="package-features">
+                    <li>红烧狮子头（4只）</li>
+                    <li>松鼠桂鱼（1条）</li>
+                    <li>葱姜炒蟹（1份）</li>
+                    <li>上海酱鸭（半只）</li>
+                    <li>清炒时蔬（1份）</li>
+                    <li>酒酿圆子（1份）</li>
+                    <li>精美果盘（1份）</li>
+                    <li>🎁 赠送康乃馨一束</li>
+                </ul>
+                
+                <a href="#" class="cta-button">立即预订座位</a>
+            </div>
+            
+            <div class="emphasis-box">
+                <p>⚠️ 仅限5月10日-11日，每日限10桌</p>
+            </div>
+            
+            <div class="divider">• • •</div>
+            
+            <!-- 零套路承诺 -->
+            <div class="section-title">我们的承诺：零套路</div>
+            
+            <p>我知道你在担心什么。</p>
+            
+            <p>"520块的套餐，会不会到店又要加这个费那个费？"</p>
+            
+            <p>放心，小南国不做这种事。</p>
+            
+            <div class="solution-box" style="background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);">
+                <h3>✅ 透明消费承诺</h3>
+                <p>套餐价格 = 最终价格</p>
+                <p>无任何隐形消费、服务费、节假日加价</p>
+                <p>预订时确认好，到店不尴尬</p>
+            </div>
+            
+            <p>我们做了30多年餐饮，靠的是口碑。坑顾客这种事，做不出来。</p>
+            
+            <div class="divider">• • •</div>
+            
+            <!-- 行动号召 -->
+            <div class="section-title">这个母亲节，行动起来</div>
+            
+            <p>我知道你很忙。</p>
+            
+            <p>但妈妈不会永远在那里等你"下次"。</p>
+            
+            <p>这个周末，花两个小时，带她吃顿好的。让她发个朋友圈，让她的姐妹们羡慕一下。</p>
+            
+            <div class="quote-box" style="border-left-color: #27ae60; background: linear-gradient(135deg, #f0fff4 0%, #e6fffa 100%);">
+                <p>"最好的礼物，不是多贵重，而是让她觉得：我的孩子长大了，知道心疼我了。"</p>
+            </div>
+            
+            <a href="#" class="cta-button">👆 点击预订母亲节套餐</a>
+            
+            <div class="tips-box">
+                <strong>📍 门店信息</strong><br>
+                上海小南国（珠海富华里店）<br>
+                地址：珠海市香洲区富华里商业街区<br>
+                预订电话：0756-XXXXXXX<br>
+                <br>
+                <strong>⏰ 营业时间：</strong>11:00-14:00，17:00-21:00<br>
+                <strong>🚗 停车：</strong>富华里地下停车场，消费满200元免费停车2小时
+            </div>
+            
+        </div>
+        
+        <!-- 结尾 -->
+        <div class="ending">
+            <div class="ending-emoji">💝</div>
+            <p>祝全天下的妈妈</p>
+            <p>母亲节快乐，永远美丽</p>
+            <div class="brand">上海小南国</div>
+            <p style="font-size:12px;color:#999;margin-top:8px;">用心做好每一道菜，温暖每一个家</p>
+        </div>
+        
+    </div>
+</body>
+</html>

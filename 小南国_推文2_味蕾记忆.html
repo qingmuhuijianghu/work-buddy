@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>母亲节｜妈妈的厨房，是我们最初的味蕾记忆</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #fafafa;
+            line-height: 1.9;
+            color: #333;
+        }
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            background: #fff;
+            min-height: 100vh;
+        }
+        .hero {
+            background: linear-gradient(135deg, #fff8e1 0%, #fff0d4 100%);
+            padding: 40px 24px;
+            text-align: center;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: #e67e22;
+            color: #fff;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-bottom: 18px;
+            letter-spacing: 1px;
+        }
+        .hero h1 {
+            font-size: 26px;
+            color: #d35400;
+            font-weight: 700;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        .hero-subtitle { color: #888; font-size: 13px; }
+        .hero-img {
+            width: 100%;
+            max-width: 520px;
+            height: 180px;
+            background: linear-gradient(135deg, #ffe0b2, #ffcc80);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto 0;
+            box-shadow: 0 8px 30px rgba(211,84,0,0.12);
+        }
+        .content { padding: 28px 24px; }
+        .divider { text-align: center; margin: 28px 0; color: #ddd; font-size: 18px; letter-spacing: 10px; }
+        .quote-box {
+            background: linear-gradient(135deg, #fff9f0 0%, #fff3e0 100%);
+            border-left: 4px solid #e67e22;
+            padding: 18px 20px;
+            border-radius: 0 14px 14px 0;
+            margin: 20px 0;
+        }
+        .quote-box p { font-size: 15px; color: #555; font-style: italic; }
+        .content p { font-size: 15.5px; color: #444; margin-bottom: 14px; text-align: justify; }
+        .highlight { background: linear-gradient(180deg, transparent 60%, #ffe0b2 60%); padding: 0 3px; font-weight: 600; color: #d35400; }
+        .section-title {
+            display: flex;
+            align-items: center;
+            margin: 28px 0 16px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+        }
+        .section-title::before {
+            content: "";
+            width: 4px;
+            height: 20px;
+            background: linear-gradient(180deg, #e67e22, #f39c12);
+            margin-right: 10px;
+            border-radius: 2px;
+        }
+        .memory-card {
+            background: #fff;
+            border: 1px solid #f0e0c8;
+            border-radius: 14px;
+            padding: 18px 20px;
+            margin: 14px 0;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+        }
+        .memory-card .emoji { font-size: 26px; margin-bottom: 8px; }
+        .memory-card h4 { font-size: 15px; color: #d35400; margin-bottom: 6px; }
+        .memory-card p { font-size: 14px; color: #666; margin: 0; }
+        .story-box {
+            background: #fffdf8;
+            border: 1px dashed #e0c090;
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin: 20px 0;
+            font-size: 14.5px;
+            color: #555;
+            position: relative;
+            padding-left: 50px;
+        }
+        .story-box::before { content: "📖"; position: absolute; left: 16px; top: 16px; font-size: 24px; }
+        .flex-list { display: flex; gap: 10px; margin: 14px 0; }
+        .flex-list .item { flex: 1; background: linear-gradient(135deg, #fff9f0, #fff3e0); border-radius: 10px; padding: 12px 6px; text-align: center; }
+        .flex-list .item .icon { font-size: 26px; margin-bottom: 4px; }
+        .flex-list .item .text { font-size: 12px; color: #d35400; font-weight: 600; }
+        .solution-box { background: linear-gradient(135deg, #d35400 0%, #e67e22 100%); color: #fff; padding: 22px; border-radius: 16px; margin: 24px 0; text-align: center; }
+        .solution-box h3 { font-size: 17px; margin-bottom: 10px; }
+        .solution-box p { color: rgba(255,255,255,0.92); font-size: 14.5px; margin-bottom: 6px; }
+        .cta-button {
+            display: block;
+            background: linear-gradient(135deg, #d35400 0%, #e67e22 100%);
+            color: #fff;
+            text-align: center;
+            padding: 15px 32px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            margin: 20px auto;
+            box-shadow: 0 6px 20px rgba(211,84,0,0.28);
+        }
+        .tips-box { background: #f8f9fa; border-radius: 12px; padding: 14px 18px; margin: 16px 0; font-size: 13px; color: #666; }
+        .tips-box strong { color: #d35400; }
+        .ending { text-align: center; padding: 36px 24px; background: linear-gradient(135deg, #fff8e1 0%, #fff0d4 100%); }
+        .ending-emoji { font-size: 42px; margin-bottom: 12px; }
+        .ending p { color: #888; font-size: 14px; margin-bottom: 6px; }
+        .ending .brand { color: #d35400; font-weight: 700; font-size: 17px; margin-top: 14px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="hero-badge">🍳 味蕾记忆系列</div>
+            <h1>妈妈的厨房<br>是我们最初的味蕾记忆</h1>
+            <p class="hero-subtitle">上海小南国 · 珠海富华里店</p>
+            <div class="hero-img">
+                <div style="text-align:center;color:#d35400;">
+                    <div style="font-size:60px;">👩‍🍳</div>
+                    <div style="font-size:16px;font-weight:600;margin-top:8px;">妈妈的味道</div>
+                    <div style="font-size:12px;color:#888;margin-top:4px;">这辈子最难忘的味道</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="quote-box">
+                <p>"好吃吗？"<br>"好吃！"<br>"那明天还做这个。"</p>
+            </div>
+
+            <p>你有没有发现一件事？</p>
+
+            <p>小时候，每次你夸一句"好吃"，妈妈第二天、第三天、第四天……会一直做同一道菜。直到你说"妈，能不能换个别的"，她才恋恋不舍地换掉。</p>
+
+            <p>她不觉得这叫单调。她觉得，这叫<span class="highlight">"你想吃嘛，我就多做一些。"</span></p>
+
+            <div class="divider">• • •</div>
+
+            <div class="section-title">那些年，妈妈做过的"拿手菜"</div>
+
+            <p>每个人的记忆里，都有那么几道菜。不是因为它多惊艳，而是因为那是妈妈做的。</p>
+
+            <div class="memory-card">
+                <div class="emoji">🥟</div>
+                <h4>那盘永远"差一点"的饺子</h4>
+                <p>皮永远擀得太厚，馅永远调得太咸。但每次你回家，她还是从头擀皮、一个个捏褶，说"外面买的哪有自己包的好吃"。</p>
+            </div>
+
+            <div class="memory-card">
+                <div class="emoji">🍳</div>
+                <h4>那碗"加了双份料"的蛋炒饭</h4>
+                <p>你随口说了一句学校食堂的蛋炒饭不好吃。第二天回家，桌上就多了一碗堆成小山、鸡蛋金黄、葱花翠绿的蛋炒饭。她站在旁边看你吃，"多吃点，外面吃不到这么足的料。"</p>
+            </div>
+
+            <div class="memory-card">
+                <div class="emoji">🥣</div>
+                <h4>那锅"熬了很久"的汤</h4>
+                <p>她说炖汤要两小时，就真的两小时，不提前不推后。你说胃不好，她不知道从哪听来的方子，加了五六种食材，说"慢慢喝，补的"。</p>
+            </div>
+
+            <div class="divider">• • •</div>
+
+            <div class="section-title">后来，我们有了自己的厨房</div>
+
+            <p>不知道从哪一天开始，你也站到了灶台前。</p>
+
+            <p>你按照菜谱一步步做，精确到克、盐少许、火候适中。味道……还行。但总觉得差了点什么。</p>
+
+            <p>差的是什么呢？</p>
+
+            <p>大概是妈妈站在灶台前那种<span class="highlight">"你爱吃，我就愿意做"</span>的笃定感。</p>
+
+            <div class="story-box">
+                有个朋友跟我说，她第一次做红烧肉，端上桌，老公说"不错"，但女儿说"没有外婆做的好吃"。她愣在原地，半天说不出话。<br><br>
+                那天晚上她打电话给她妈："妈，你那个红烧肉到底怎么做的？"<br><br>
+                她妈在电话那头笑了："哪有什么秘方，就是你小时候爱吃，我做了一辈子而已。"
+            </div>
+
+            <div class="divider">• • •</div>
+
+            <div class="section-title">今年，让妈妈也坐下来吃</div>
+
+            <p>妈妈做了几十年的饭。</p>
+
+            <p>她知道所有你爱吃的口味，却很少说"我想吃什么"。她习惯了照顾全家人，却很少被人照顾。</p>
+
+            <p>今年母亲节，把她从厨房里解放出来。</p>
+
+            <p>让她坐在桌前，<span class="highlight">你给她夹菜</span>，而不是她一直为你们盛饭。</p>
+
+            <div class="solution-box">
+                <h3>🍽️ 母亲节，带妈妈吃一顿"外面"的饭</h3>
+                <p>不用她洗菜、备菜、炒菜、刷碗</p>
+                <p>不用她操心"你们爱不爱吃"</p>
+                <p>就让她安安静静，当一次被伺候的人</p>
+            </div>
+
+            <div class="section-title">小南国的菜，有妈妈做菜的心</div>
+
+            <p>小南国的老师傅做菜，有一个特点：<span class="highlight">不急，不省，不凑合。</span></p>
+
+            <p>红烧狮子头，要炖够时辰。蟹要活的，蔬菜要当天送来的。</p>
+
+            <p>这不是什么匠心精神，这就是<span class="highlight">"有人要吃，我就好好做"</span>的心情。</p>
+
+            <div class="flex-list">
+                <div class="item"><div class="icon">🧆</div><div class="text">红烧狮子头</div></div>
+                <div class="item"><div class="icon">🦀</div><div class="text">葱姜炒蟹</div></div>
+                <div class="item"><div class="icon">🐟</div><div class="text">松鼠桂鱼</div></div>
+                <div class="item"><div class="icon">🥬</div><div class="text">清炒时蔬</div></div>
+            </div>
+
+            <div class="quote-box" style="border-left-color:#d35400;background:linear-gradient(135deg,#fff9f0,#fff3e0);">
+                <p>"妈妈不需要米其林<br>她只需要——你在身边，菜很好吃"</p>
+            </div>
+
+            <div class="solution-box" style="background:linear-gradient(135deg,#27ae60,#2ecc71);">
+                <h3>🎁 母亲节感恩套餐 · 限时¥520</h3>
+                <p>3-4人份 · 7道菜品 · 附赠康乃馨</p>
+                <p>节假日不加价 · 套餐价=结账价</p>
+            </div>
+
+            <a href="#" class="cta-button">👆 带妈妈来吃一顿</a>
+
+            <div class="tips-box">
+                <strong>📍 上海小南国（珠海富华里店）</strong><br>
+                地址：珠海市香洲区富华里商业街区<br>
+                预订：0756-XXXXXXX | 营业：11:00-14:00 / 17:00-21:00<br>
+                <strong>🚗</strong> 富华里地下停车场，消费满200免费停2小时
+            </div>
+        </div>
+
+        <div class="ending">
+            <div class="ending-emoji">❤️</div>
+            <p>妈妈的爱，藏在每一道菜里</p>
+            <p>今年，换我们喂她吃一口</p>
+            <div class="brand">上海小南国</div>
+        </div>
+    </div>
+</body>
+</html>

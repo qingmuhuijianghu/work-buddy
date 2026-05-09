@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>母亲节｜带妈妈吃饭，照这5条标准选，准没错</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #fafafa;
+            line-height: 1.85;
+            color: #333;
+        }
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            background: #fff;
+            min-height: 100vh;
+        }
+        .hero {
+            background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+            padding: 40px 24px;
+            text-align: center;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: #2e7d32;
+            color: #fff;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-bottom: 18px;
+            letter-spacing: 1px;
+        }
+        .hero h1 {
+            font-size: 26px;
+            color: #1b5e20;
+            font-weight: 700;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        .hero-subtitle { color: #888; font-size: 13px; }
+        .hero-img {
+            width: 100%;
+            max-width: 520px;
+            height: 180px;
+            background: linear-gradient(135deg, #c8e6c9, #a5d6a7);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto 0;
+            box-shadow: 0 8px 30px rgba(27,94,32,0.12);
+        }
+        .content { padding: 28px 24px; }
+        .divider { text-align: center; margin: 28px 0; color: #ddd; font-size: 18px; letter-spacing: 10px; }
+        .intro-box {
+            background: linear-gradient(135deg, #f1f8e9, #e8f5e9);
+            border-radius: 14px;
+            padding: 20px;
+            margin: 20px 0;
+            font-size: 15px;
+            color: #2e7d32;
+            text-align: center;
+        }
+        .intro-box p { color: #555; font-size: 15px; margin-bottom: 8px; }
+        .intro-box p:last-child { margin-bottom: 0; }
+        .content p { font-size: 15.5px; color: #444; margin-bottom: 14px; text-align: justify; }
+        .highlight { background: linear-gradient(180deg, transparent 60%, #c8e6c9 60%); padding: 0 3px; font-weight: 600; color: #2e7d32; }
+        .section-title {
+            display: flex;
+            align-items: center;
+            margin: 28px 0 16px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+        }
+        .section-title::before {
+            content: "";
+            width: 4px;
+            height: 20px;
+            background: linear-gradient(180deg, #2e7d32, #43a047);
+            margin-right: 10px;
+            border-radius: 2px;
+        }
+        .criteria-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 14px;
+            overflow: hidden;
+            margin: 18px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .criteria-header {
+            background: linear-gradient(135deg, #2e7d32, #388e3c);
+            color: #fff;
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .criteria-num {
+            width: 32px;
+            height: 32px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .criteria-title { font-size: 16px; font-weight: 700; }
+        .criteria-body { padding: 16px 18px; background: #fff; }
+        .criteria-body p { font-size: 14.5px; color: #555; margin-bottom: 10px; }
+        .criteria-body .tag {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            margin-right: 6px;
+            margin-bottom: 4px;
+        }
+        .verdict-box {
+            background: #fff;
+            border: 2px solid #2e7d32;
+            border-radius: 14px;
+            padding: 18px;
+            margin: 14px 0;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .verdict-icon { font-size: 36px; flex-shrink: 0; }
+        .verdict-text { flex: 1; }
+        .verdict-text .name { font-size: 15px; font-weight: 700; color: #2e7d32; margin-bottom: 4px; }
+        .verdict-text .desc { font-size: 13px; color: #666; }
+        .solution-box { background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%); color: #fff; padding: 22px; border-radius: 16px; margin: 24px 0; text-align: center; }
+        .solution-box h3 { font-size: 17px; margin-bottom: 10px; }
+        .solution-box p { color: rgba(255,255,255,0.92); font-size: 14.5px; margin-bottom: 6px; }
+        .cta-button {
+            display: block;
+            background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+            color: #fff;
+            text-align: center;
+            padding: 15px 32px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            margin: 20px auto;
+            box-shadow: 0 6px 20px rgba(27,94,32,0.28);
+        }
+        .tips-box { background: #f8f9fa; border-radius: 12px; padding: 14px 18px; margin: 16px 0; font-size: 13px; color: #666; }
+        .tips-box strong { color: #2e7d32; }
+        .ending { text-align: center; padding: 36px 24px; background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%); }
+        .ending-emoji { font-size: 42px; margin-bottom: 12px; }
+        .ending p { color: #888; font-size: 14px; margin-bottom: 6px; }
+        .ending .brand { color: #2e7d32; font-weight: 700; font-size: 17px; margin-top: 14px; }
+        .summary-box {
+            background: #fffde7;
+            border: 1px solid #f9a825;
+            border-radius: 14px;
+            padding: 18px;
+            margin: 20px 0;
+        }
+        .summary-box h4 { font-size: 15px; color: #f57f17; margin-bottom: 10px; }
+        .summary-box li { font-size: 14px; color: #666; margin-bottom: 6px; padding-left: 20px; position: relative; list-style: none; }
+        .summary-box li::before { content: "✅"; position: absolute; left: 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="hero-badge">📋 选餐厅标准清单</div>
+            <h1>带妈妈吃饭<br>照这5条标准选，准没错</h1>
+            <p class="hero-subtitle">上海小南国 · 珠海富华里店</p>
+            <div class="hero-img">
+                <div style="text-align:center;color:#1b5e20;">
+                    <div style="font-size:60px;">👩‍👧‍👦</div>
+                    <div style="font-size:16px;font-weight:600;margin-top:8px;">带妈妈吃好的</div>
+                    <div style="font-size:12px;color:#888;margin-top:4px;">标准选对了，就成功了一半</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+
+            <div class="intro-box">
+                <p>母亲节带妈妈吃饭，是技术活。</p>
+                <p>选错了，被念叨一整年。<br>选对了，妈妈开心一整年。</p>
+            </div>
+
+            <p>每年母亲节前，我都会收到一堆问题：</p>
+
+            <p>"带妈妈去哪吃好啊？" "人均多少合适？" "妈妈口味清淡，怎么选？" "怕被坑怎么办？"</p>
+
+            <p>别急。今天给你一个<span class="highlight">5条标准清单</span>，照着选，不会错。</p>
+
+            <div class="divider">• • •</div>
+
+            <div class="section-title">标准一：妈妈的口味，能不能被满足？</div>
+
+            <p>这是最容易被忽略的一点。</p>
+
+            <p>你兴冲冲带妈妈去了网红餐厅，结果菜品全是重辣重油。妈妈夹了两筷子就说"太辣了，吃不下"，全程尴尬。</p>
+
+            <div class="criteria-card">
+                <div class="criteria-header">
+                    <div class="criteria-num">1</div>
+                    <div class="criteria-title">口味清淡，能照顾到长辈</div>
+                </div>
+                <div class="criteria-body">
+                    <p>妈妈这代人，口味偏传统。浓油赤酱可以，太辣太生猛就算了。</p>
+                    <span class="tag">少油</span><span class="tag">少盐</span><span class="tag">不辣</span><span class="tag">软烂易嚼</span>
+                    <div class="verdict-box">
+                        <div class="verdict-icon">🧆</div>
+                        <div class="verdict-text">
+                            <div class="name">小南国：上海本帮菜</div>
+                            <div class="desc">浓油赤酱但不过重，口味温和，适合长辈</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider">• • •</div>
+
+            <div class="section-title">标准二：价格透明吗？有没有套路？</div>
+
+            <p>这是踩坑重灾区。</p>
+
+            <p>"母亲节特价套餐398"，结果到店发现：包厢有低消、周末加价30%、茶位费另算、服务费另算……一算下来人均200+，还吃得一肚子气。</p>
+
+            <div class="criteria-card">
+                <div class="criteria-header">
+                    <div class="criteria-num">2</div>
+                    <div class="criteria-title">价格透明，提前告知所有费用</div>
+                </div>
+                <div class="criteria-body">
+                    <p>妈妈吃个饭还要担心被坑，这是最扫兴的事。</p>
+                    <span class="tag">节假日一口价</span><span class="tag">无服务费</span><span class="tag">无低消门槛</span><span class="tag">套餐=结账价</span>
+                    <div class="verdict-box">
+                        <div class="verdict-icon">💚</div>
+                        <div class="verdict-text">
+                            <div class="name">小南国：零套路承诺</div>
+                            <div class="desc">套餐价=最终价，无任何隐形消费</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider">• • •</div>
+
+            <div class="section-title">标准三：环境够不够体面？</div>
+
+            <p>妈妈嘴上说"随便吃点就行"，但朋友圈还是要发的。</p>
+
+            <p>如果餐厅灯光昏暗、装修老旧、座位挤挤挨挨，妈妈怎么拍照？怎么跟姐妹炫耀？</p>
+
+            <div class="criteria-card">
+                <div class="criteria-header">
+                    <div class="criteria-num">3</div>
+                    <div class="criteria-title">环境体面，有仪式感</div>
+                </div>
+                <div class="criteria-body">
+                    <p>选餐厅，就是选"妈妈发朋友圈的素材"。</p>
+                    <span class="tag">灯光柔和</span><span class="tag">有主题布置</span><span class="tag">座位舒适</span><span class="tag">适合拍照</span>
+                    <div class="verdict-box">
+                        <div class="verdict-icon">🌸</div>
+                        <div class="verdict-text">
+                            <div class="name">小南国：母亲节主题布置</div>
+                            <div class="desc">粉色花艺+心形立牌+烛光氛围，拍照超出片</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider">• • •</div>
+
+            <div class="section-title">标准四：能不能停车？方不方便？</div>
+
+            <p>带妈妈出去吃，开车的话最怕什么？</p>
+
+            <p>找不到停车位。妈妈在车上坐了半小时，腿都坐麻了，心情全没了。</p>
+
+            <div class="criteria-card">
+                <div class="criteria-header">
+                    <div class="criteria-num">4</div>
+                    <div class="criteria-title">停车方便，有免费时长</div>
+                </div>
+                <div class="criteria-body">
+                    <p>细节决定体验，别让停车问题毁了母亲节。</p>
+                    <span class="tag">有停车场</span><span class="tag">免费停车</span><span class="tag">位置好找</span>
+                    <div class="verdict-box">
+                        <div class="verdict-icon">🚗</div>
+                        <div class="verdict-text">
+                            <div class="name">富华里停车场</div>
+                            <div class="desc">地下停车场，消费满200元免费停2小时</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider">• • •</div>
+
+            <div class="section-title">标准五：订座方便吗？会不会到店等位？</div>
+
+            <p>母亲节当天，热门餐厅一位难求。</p>
+
+            <p>不提前订座，到店等一个小时，妈妈的腿站酸了，脾气也等出来了。</p>
+
+            <div class="criteria-card">
+                <div class="criteria-header">
+                    <div class="criteria-num">5</div>
+                    <div class="criteria-title">可提前订座，到店即入座</div>
+                </div>
+                <div class="criteria-body">
+                    <p>提前订好，母亲节当天直接入座，不让妈妈等。</p>
+                    <span class="tag">可电话订座</span><span class="tag">节假日可用</span><span class="tag">无需等位</span>
+                    <div class="verdict-box">
+                        <div class="verdict-icon">📞</div>
+                        <div class="verdict-text">
+                            <div class="name">小南国：提前预订</div>
+                            <div class="desc">母亲节期间每日限10桌，建议提前2天预订</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider">• • •</div>
+
+            <div class="section-title">总结一下</div>
+
+            <div class="summary-box">
+                <h4>🎯 母亲节选餐厅的5条标准</h4>
+                <ul>
+                    <li>✅ 口味清淡，适合长辈</li>
+                    <li>✅ 价格透明，没有套路</li>
+                    <li>✅ 环境体面，有仪式感</li>
+                    <li>✅ 停车方便，省心省力</li>
+                    <li>✅ 可提前订座，不用等位</li>
+                </ul>
+            </div>
+
+            <p>按这5条标准筛一遍，你会发现选项其实不多。</p>
+
+            <p>而<span class="highlight">上海小南国，刚好每一条都满足。</span></p>
+
+            <div class="solution-box">
+                <h3>🎁 母亲节感恩套餐</h3>
+                <p>3-4人份 · 7道菜品 · ¥520</p>
+                <p>附赠康乃馨 · 节假日不加价 · 无任何隐形消费</p>
+                <p>仅限5月10日-11日，每日限10桌</p>
+            </div>
+
+            <a href="#" class="cta-button">👆 按这5条标准，选小南国就对了</a>
+
+            <div class="tips-box">
+                <strong>📍 上海小南国（珠海富华里店）</strong><br>
+                地址：珠海市香洲区富华里商业街区<br>
+                预订：0756-XXXXXXX | 营业：11:00-14:00 / 17:00-21:00<br>
+                <strong>🚗</strong> 富华里地下停车场，消费满200免费停2小时
+            </div>
+
+        </div>
+
+        <div class="ending">
+            <div class="ending-emoji">🌿</div>
+            <p>按标准选餐厅</p>
+            <p>让妈妈过一个体面的母亲节</p>
+            <div class="brand">上海小南国</div>
+        </div>
+    </div>
+</body>
+</html>
