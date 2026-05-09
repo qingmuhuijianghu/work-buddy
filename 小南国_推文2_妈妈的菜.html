@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>母亲节｜小南国·妈妈的私房菜单｜那些年妈妈爱吃的菜</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5;
+            line-height: 1.9;
+            color: #333;
+        }
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            background: #fff;
+            min-height: 100vh;
+        }
+        /* 头图 */
+        .hero {
+            background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
+            padding: 50px 24px 40px;
+            text-align: center;
+            color: #fff;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.25);
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .hero h1 {
+            font-size: 30px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+        .hero-sub {
+            font-size: 15px;
+            opacity: 0.9;
+        }
+        /* 内容区 */
+        .content {
+            padding: 30px 24px;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 22px;
+            color: #ea580c;
+            margin-bottom: 24px;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #ea580c;
+            margin: 12px auto 0;
+            border-radius: 2px;
+        }
+        /* 故事区 */
+        .story-card {
+            background: linear-gradient(to bottom, #fff7ed, #fff);
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin-bottom: 24px;
+            border: 1px solid #fed7aa;
+        }
+        .story-card .emoji {
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        .story-card p {
+            text-align: center;
+            color: #555;
+            font-size: 15px;
+        }
+        .story-card p strong {
+            color: #ea580c;
+        }
+        /* 菜品展示 */
+        .dish-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+        .dish-img {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 42px;
+            flex-shrink: 0;
+        }
+        .dish-info {
+            flex: 1;
+        }
+        .dish-info h4 {
+            color: #ea580c;
+            font-size: 17px;
+            margin-bottom: 6px;
+        }
+        .dish-info p {
+            color: #666;
+            font-size: 14px;
+        }
+        /* 引用 */
+        .quote-box {
+            background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+            border-left: 4px solid #f97316;
+            padding: 20px;
+            margin: 24px 0;
+            border-radius: 0 12px 12px 0;
+            font-style: italic;
+            color: #9a3412;
+        }
+        /* 优惠卡 */
+        .promo-card {
+            background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+            border-radius: 16px;
+            padding: 24px;
+            color: #fff;
+            text-align: center;
+            margin: 24px 0;
+        }
+        .promo-card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        .promo-card .price {
+            font-size: 32px;
+            font-weight: 800;
+            margin: 12px 0;
+        }
+        .promo-card .note {
+            font-size: 13px;
+            opacity: 0.85;
+        }
+        /* CTA */
+        .cta-section {
+            padding: 30px 24px 50px;
+            text-align: center;
+        }
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+            color: #fff;
+            padding: 16px 48px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(234, 88, 12, 0.35);
+        }
+        .cta-note {
+            color: #999;
+            font-size: 13px;
+            margin-top: 16px;
+        }
+        .divider {
+            height: 8px;
+            background: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="hero-badge">🍜 妈妈的私房菜单</div>
+            <h1>带妈妈来吃<br>"妈妈会喜欢的那道菜"</h1>
+            <p class="hero-sub">每一口，都是小时候的味道</p>
+        </div>
+
+        <div class="content">
+            <div class="section-title">💝 妈妈的菜，妈妈的味</div>
+
+            <div class="quote-box">
+                "妈，这道菜的味道，和您做的一样。"<br>
+                ——这是母亲节最想说给妈妈听的一句话
+            </div>
+
+            <div class="story-card">
+                <div class="emoji">👩‍🍳</div>
+                <p>妈妈总说：<strong>"外面的菜太咸"</strong><br>
+                <strong>"那个红烧肉不够软糯"</strong><br>
+                <strong>"这条鱼得清蒸才有鲜味"</strong><br><br>
+                这个母亲节，带妈妈来小南国<br>
+                让她尝尝，"记忆中的味道"</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="content">
+            <div class="section-title">🔥 妈妈最爱·招牌推荐</div>
+
+            <div class="dish-card">
+                <div class="dish-img">🥩</div>
+                <div class="dish-info">
+                    <h4>外婆红烧肉</h4>
+                    <p>肥瘦三七开，慢炖两小时，入口即化。这是妈妈做红烧肉的标准，也是小南国对每一位妈妈的心意。</p>
+                </div>
+            </div>
+
+            <div class="dish-card">
+                <div class="dish-img">🦆</div>
+                <div class="dish-info">
+                    <h4>招牌北京烤鸭</h4>
+                    <p>皮脆肉嫩，配上薄饼葱丝甜面酱。妈妈说，吃烤鸭要有仪式感，一家人围在一起卷，才够味。</p>
+                </div>
+            </div>
+
+            <div class="dish-card">
+                <div class="dish-img">🐟</div>
+                <div class="dish-info">
+                    <h4>清蒸石斑鱼</h4>
+                    <p>妈妈总是把鱼眼睛夹给你，说"吃鱼眼明目"。这条鱼，我们用最简单的方式，保留最纯粹的鲜。</p>
+                </div>
+            </div>
+
+            <div class="dish-card">
+                <div class="dish-img">🦐</div>
+                <div class="dish-info">
+                    <h4>招牌水晶虾仁</h4>
+                    <p>晶莹剔透，弹牙爽口。这是妈妈年轻时下馆子必点的那道菜，现在依然是。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="promo-card">
+                <h3>🎁 母亲节特别福利</h3>
+                <div class="price">套餐立减 ¥200</div>
+                <div>感恩宴套餐 ¥998（原价¥1198）</div>
+                <div class="note">还送康乃馨一束 + 免费拍照</div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <a href="#" class="cta-btn">📞 帮妈妈预订位置</a>
+            <p class="cta-note">📍 预订电话：021-XXXX-XXXX<br>⏰ 截止时间：5月10日晚6点</p>
+        </div>
+    </div>
+</body>
+</html>
