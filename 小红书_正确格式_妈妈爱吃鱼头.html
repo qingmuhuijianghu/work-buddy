@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>小红书 · 妈妈说：我不爱吃鱼头</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; background: #f5f5f5; }
+        .container { max-width: 414px; margin: 0 auto; background: #fff; min-height: 100vh; }
+        
+        /* 图片轮播区 */
+        .swiper { position: relative; width: 100%; height: 414px; background: #000; }
+        .swiper img { width: 100%; height: 100%; object-fit: cover; }
+        .swiper-dots { position: absolute; bottom: 15px; left: 0; right: 0; text-align: center; }
+        .swiper-dots span { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.5); margin: 0 3px; }
+        .swiper-dots span.active { background: #ff2442; width: 18px; border-radius: 3px; }
+        
+        /* 用户信息 */
+        .user-info { display: flex; align-items: center; padding: 12px 16px; gap: 10px; }
+        .user-avatar { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, #667eea, #764ba2); display: flex; align-items: center; justify-content: center; color: white; font-size: 18px; }
+        .user-name { font-size: 14px; font-weight: 600; color: #333; }
+        .user-follow { margin-left: auto; background: #ff2442; color: white; border: none; padding: 6px 16px; border-radius: 20px; font-size: 13px; }
+        
+        /* 标题+文案 */
+        .content { padding: 0 16px 20px; }
+        .title { font-size: 18px; font-weight: 700; color: #333; line-height: 1.5; margin-bottom: 10px; }
+        .copy { font-size: 15px; color: #333; line-height: 1.8; white-space: pre-line; }
+        
+        /* 话题标签 */
+        .hashtags { padding: 0 16px 15px; display: flex; flex-wrap: wrap; gap: 8px; }
+        .hashtag { color: #ff2442; font-size: 14px; }
+        
+        /* 互动区 */
+        .actions { display: flex; padding: 0 16px 20px; gap: 20px; }
+        .action-btn { display: flex; align-items: center; gap: 5px; color: #999; font-size: 14px; background: none; border: none; }
+        
+        /* 评论区 */
+        .comments { padding: 0 16px 20px; }
+        .comment { display: flex; gap: 10px; margin-bottom: 12px; }
+        .comment-avatar { width: 32px; height: 32px; border-radius: 50%; background: #f0f0f0; flex-shrink: 0; }
+        .comment-content { flex: 1; }
+        .comment-user { font-size: 13px; color: #666; margin-bottom: 3px; }
+        .comment-text { font-size: 14px; color: #333; line-height: 1.5; }
+        
+        /* 底部输入框 */
+        .input-bar { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 414px; background: #fff; border-top: 1px solid #eee; padding: 10px 16px; display: flex; align-items: center; gap: 10px; }
+        .input-box { flex: 1; background: #f5f5f5; border-radius: 20px; padding: 8px 15px; font-size: 14px; color: #999; }
+        .input-send { color: #ff2442; font-size: 14px; font-weight: 600; background: none; border: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 图片轮播 -->
+        <div class="swiper">
+            <img src="小南国1.jpg" alt="小南国">
+            <div class="swiper-dots">
+                <span class="active"></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <!-- 用户信息 -->
+        <div class="user-info">
+            <div class="user-avatar">🌸</div>
+            <div class="user-name">青木会江湖</div>
+            <button class="user-follow">关注</button>
+        </div>
+        
+        <!-- 标题+文案 -->
+        <div class="content">
+            <div class="title">妈妈说：我不爱吃鱼头 🐟</div>
+            <div class="copy">每次吃鱼，她都把鱼脸肉夹给我，说："我不爱吃鱼头，你吃这个。"
+
+我小时候真信了。
+
+后来我长大了，才发现——
+
+她不是不爱吃。
+
+她只是想把最好的留给我。💕
+
+这招叫"爱的谎言"，妈妈们用了一辈子。
+
+今年母亲节，把鱼脸肉夹给她，说："妈，这个给你，我知道你爱吃。"
+
+她一定会笑。😊</div>
+        </div>
+        
+        <!-- 话题标签 -->
+        <div class="hashtags">
+            <span class="hashtag">#母亲节</span>
+            <span class="hashtag">#母亲节礼物</span>
+            <span class="hashtag">#妈妈的爱</span>
+            <span class="hashtag">#母亲节餐厅</span>
+            <span class="hashtag">#小南国</span>
+            <span class="hashtag">#深圳美食</span>
+        </div>
+        
+        <!-- 互动区 -->
+        <div class="actions">
+            <button class="action-btn">❤️ 1.2万</button>
+            <button class="action-btn">💬 328</button>
+            <button class="action-btn">🔗 分享</button>
+        </div>
+        
+        <!-- 评论区 -->
+        <div class="comments">
+            <div class="comment">
+                <div class="comment-avatar"></div>
+                <div class="comment-content">
+                    <div class="comment-user">小确幸</div>
+                    <div class="comment-text">看哭了，我妈也这样😭</div>
+                </div>
+            </div>
+            <div class="comment">
+                <div class="comment-avatar"></div>
+                <div class="comment-content">
+                    <div class="comment-user">喵星人</div>
+                    <div class="comment-text">今年母亲节一定要带妈妈去吃顿好的！</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 底部输入框 -->
+    <div class="input-bar">
+        <div class="input-box">说点什么...</div>
+        <button class="input-send">发送</button>
+    </div>
+</body>
+</html>
